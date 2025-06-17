@@ -16,7 +16,7 @@ import { reactive, ref } from "vue"
  * reset() // state.value.count 将重置为 0
  * ```
  */
-export function useResettableRef<T extends Record<string, unknown>>(val: () => T): [Ref<T>, () => void] {
+export function useResettableRef<T extends object>(val: () => T): [Ref<T>, () => void] {
   const initialValue = cloneDeep(val())
   const state = ref<T>(val())
   const reset = (): void => {
@@ -39,11 +39,11 @@ export function useResettableRef<T extends Record<string, unknown>>(val: () => T
  * reset() // state.count 将重置为 0
  * ```
  */
-export function useResettableReactive<T extends Record<string, unknown>>(val: () => T): [T, () => void] {
+export function useResettableReactive<T extends object>(val: () => T): [T, () => void] {
   const state = reactive(cloneDeep(val()))
   const reset = (): void => {
     for (const key of Object.keys(state)) {
-      delete state[key]
+      delete (state as Record<string, unknown>)[key]
     }
     Object.assign(state, cloneDeep(val()))
   }
