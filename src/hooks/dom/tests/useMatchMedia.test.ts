@@ -137,8 +137,8 @@ describe("useMatchMedia", () => {
     const query1 = "(max-width: 768px)"
     const query2 = "(min-width: 1024px)"
 
-    const result1 = useMatchMedia(query1)
-    const result2 = useMatchMedia(query2)
+    useMatchMedia(query1)
+    useMatchMedia(query2)
 
     expect(window.matchMedia).toHaveBeenCalledTimes(2)
     expect(window.matchMedia).toHaveBeenNthCalledWith(1, query1)
