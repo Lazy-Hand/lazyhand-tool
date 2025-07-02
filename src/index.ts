@@ -2,6 +2,7 @@ import type { App, Directive } from "vue";
 
 // 全局导出组件
 export { default as Button } from "./Button.vue";
+export { default as Echarts } from "./components/Echarts/index.vue";
 
 // 全局导出hooks
 export * from "./hooks";
