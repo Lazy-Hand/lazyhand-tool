@@ -1,46 +1,44 @@
 {
-  "name": "lazyhand-tool",
-  "version": "0.0.8",
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Lazy-Hand/lazyhand-tool.git"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
-    }
-  },
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "scripts": {
-    "build": "rslib build && vue-tsc",
-    "dev": "rslib build --watch",
-    "test": "vitest run"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@rslib/core": "^0.9.2",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/vue": "^8.1.0",
-    "@vitejs/plugin-vue": "^5.2.4",
-    "jsdom": "^26.1.0",
-    "rsbuild-plugin-unplugin-vue": "^0.1.0",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.2",
-    "vue": "^3.5.16",
-    "vue-tsc": "^2.2.10"
-  },
-  "peerDependencies": {
-    "vue": "^3.2.0"
-  },
-  "dependencies": {
-    "@vueuse/core": "^13.5.0",
-    "echarts": "^5.6.0",
-    "echarts-liquidfill": "^3.1.0",
-    "radashi": "^12.5.1"
-  }
+	"name": "lazyhand-tool",
+	"version": "0.1.0",
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Lazy-Hand/lazyhand-tool.git"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js"
+		}
+	},
+	"types": "./dist/index.d.ts",
+	"files": ["dist"],
+	"scripts": {
+		"build": "rslib build && vue-tsc",
+		"dev": "rslib build --watch",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@rslib/core": "^0.9.2",
+		"@testing-library/jest-dom": "^6.6.3",
+		"@testing-library/vue": "^8.1.0",
+		"@vitejs/plugin-vue": "^5.2.4",
+		"jsdom": "^26.1.0",
+		"rsbuild-plugin-unplugin-vue": "^0.1.0",
+		"typescript": "^5.8.3",
+		"vitest": "^3.2.2",
+		"vue": "^3.5.16",
+		"vue-tsc": "^2.2.10"
+	},
+	"peerDependencies": {
+		"vue": "^3.2.0"
+	},
+	"dependencies": {
+		"@vueuse/core": "^13.5.0",
+		"echarts": "^5.6.0",
+		"echarts-liquidfill": "^3.1.0",
+		"radashi": "^12.5.1"
+	}
 }
