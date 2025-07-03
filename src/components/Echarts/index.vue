@@ -2,7 +2,7 @@
 import type { ECElementEvent, EChartsType } from "echarts/core";
 import type { ECOption } from "./config";
 import { useDebounceFn, useResizeObserver } from "@vueuse/core";
-import echarts from "./config";
+import { echarts } from "./config";
 import {
 	ref,
 	shallowRef,
